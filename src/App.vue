@@ -1,14 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <component :is="layout">
+      <router-view />
+    </component>
   </div>
 </template>
 
-<style lang="sass">
+<script>
+import MainLayout from '@/layouts/MainLayout'
+export default {
+  computed: {
+    layout() {
+      return 'main-layout'
+    }
+  },
+  components: {
+    MainLayout
+  }
+};
+</script>
+
+<style lang="scss">
 /* ---------------------------------- home ---------------------------------- */
 /* ---------------------------------- Work ---------------------------------- */
 /* --------------------------------- Клиенты -------------------------------- */
@@ -16,5 +28,4 @@
 /* ----------------------------------- Ru ----------------------------------- */
 /* ---------------------------- Связаться с нами ---------------------------- */
 /* ---------------------------------- скил ---------------------------------- */
-
 </style>
