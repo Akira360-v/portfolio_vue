@@ -18,7 +18,7 @@
           <div class="switch">
             <label>
               eng
-              <input type="checkbox" />
+              <!-- <input type="checkbox" /> -->
               <input type="checkbox" v-model="isRuLocale" />
               <span class="lever"></span>
               rus
@@ -35,20 +35,25 @@
 
 // import { mapGetters } from "vuex";
 export default {
+  
   data: () => ({
     name: '',
-    isRuLocale: true
+    isRuLocale: true,
   }),
+    mounted() {
+    // this.isRuLocale = this.info.locale === 'ru-RU'
+    // this.isRuLocale = true === 'ru-RU'
+    // призыв базы неим
+    // this.name = this.info.name
+  },
   computed: {
     // locale() {
     //   return 'ru-RU'
     // }
+    // ...mapGetters(['info'])
   },
 
-  mounted() {
-    // this.isRuLocale = this.info.locale === 'ru-RU'
-    // this.isRuLocale = true === 'ru-RU'
-  },
+
   methods: {
     // locale:this.isRuLocale ? "ru-RU" : 'en-US'
     // locale: this.isRuLocale ? 'ru-RU' : 'en-US'
