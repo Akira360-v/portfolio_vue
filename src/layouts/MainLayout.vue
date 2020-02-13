@@ -1,7 +1,7 @@
 <template>
   <div class="main-layout">
-    <div class="qwe">asd</div>
     <Navbar />
+    <div class="qwe">asd</div>
     <router-view />
     <Footer />
     <div class="qwe">asdasdas</div>

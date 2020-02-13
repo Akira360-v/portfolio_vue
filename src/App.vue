@@ -7,25 +7,22 @@
 </template>
 
 <script>
-import MainLayout from '@/layouts/MainLayout'
+import MainLayout from "@/layouts/MainLayout";
+import EmptyLayout from "@/layouts/EmptyLayout";
 export default {
   computed: {
     layout() {
-      return 'main-layout'
+      return (this.$route.meta.layout || 'main') + '-layout'
     }
   },
   components: {
-    MainLayout
+    MainLayout,
+    EmptyLayout
   }
 };
 </script>
 
 <style lang="scss">
-/* ---------------------------------- home ---------------------------------- */
-/* ---------------------------------- Work ---------------------------------- */
-/* --------------------------------- Клиенты -------------------------------- */
-/* -------------------------------- Контакты -------------------------------- */
-/* ----------------------------------- Ru ----------------------------------- */
-/* ---------------------------- Связаться с нами ---------------------------- */
-/* ---------------------------------- скил ---------------------------------- */
+@import "~materialize-css/dist/css/materialize.min.css";
+@import "assets/css.css";
 </style>
