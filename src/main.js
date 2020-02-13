@@ -17,7 +17,7 @@ Vue.filter('localize', localizeFilter)
 
 Vue.config.productionTip = false
 
-firebase.initializeApp = {
+firebase.initializeApp({
   apiKey: "AIzaSyDhdVQEqO9ys0ekUkrOwdGYVQ_XSUTKjos",
   authDomain: "akira360-v.firebaseapp.com",
   databaseURL: "https://akira360-v.firebaseio.com",
@@ -26,13 +26,17 @@ firebase.initializeApp = {
   messagingSenderId: "418197468305",
   appId: "1:418197468305:web:795cc66ad9a27e2099bb30",
   measurementId: "G-FKYT8BRHL2"
-};
+})
 
 
+let app
 
-
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+firebase.auth().onAuthStateChanged(() => {
+  if (!app) {
+    app = new Vue({
+      router,
+      store,
+      render: h => h(App)
+    }).$mount('#app')
+  }
+})
