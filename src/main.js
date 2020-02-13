@@ -3,6 +3,9 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+
+import localizeFilter from './filters/localize.filter'
+
 import './assets/index.sass'
 import 'materialize-css/dist/js/materialize.min'
 
@@ -10,6 +13,7 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
 
+Vue.filter('localize', localizeFilter)
 
 Vue.config.productionTip = false
 

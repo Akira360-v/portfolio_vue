@@ -13,11 +13,13 @@
             <router-link to="/about">Работы</router-link>
             <router-link to="/about">Клиенты</router-link>
             <router-link to="/about">Контакты</router-link>
+            <router-link to="/about">{{'proName'}}</router-link>
           </div>
           <div class="switch">
             <label>
               eng
               <input type="checkbox" />
+              <input type="checkbox" v-model="isRuLocale" />
               <span class="lever"></span>
               rus
             </label>
@@ -29,22 +31,29 @@
 </template>
 
 <script>
+// import '@/filters/localize.filter.js'
+
 // import { mapGetters } from "vuex";
 export default {
-  // data: () => ({
-  //   name: ''
-  // }),
-  
-  // // mounted() {
-  // //   this.name = this.info.name
-  // //   setTimeout(() => {
-  // //     M.updateTextFields()
-  // //   })
-  // // },
-  // computed: {
-  //   ...mapGetters(['info'])
-  // }
-};
+  data: () => ({
+    name: '',
+    isRuLocale: true
+  }),
+  computed: {
+    // locale() {
+    //   return 'ru-RU'
+    // }
+  },
+
+  mounted() {
+    // this.isRuLocale = this.info.locale === 'ru-RU'
+    // this.isRuLocale = true === 'ru-RU'
+  },
+  methods: {
+    // locale:this.isRuLocale ? "ru-RU" : 'en-US'
+    // locale: this.isRuLocale ? 'ru-RU' : 'en-US'
+  }
+}
 </script>
 
 <style>
