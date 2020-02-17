@@ -13,7 +13,7 @@ body
   margin: 0
   padding: 0
   font-family: $mainFont
-  font-size: 1.6rem
+  font-size: mainFontSize
   font-weight: $mainFontWeight
 
 *,
@@ -51,22 +51,22 @@ section,
   max-width: $desktopWidth
   padding: 0 20px
 
-// body
-//   &::-webkit-scrollbar 
-//     width: 10px //12
-//     height: 10px //12
-//   &::-webkit-scrollbar-track-piece
-//     background:rgba(0,0,0,0)
-//   &::-webkit-scrollbar-thumb:vertical
-//     height: 10px
-//     background: #272c35
-//   &::-webkit-scrollbar-thumb:vertical:hover
-//     background: #71CA55
-//   &::-webkit-scrollbar-thumb:horizontal
-//     width: 10px
-//     background: #272c35
-//   &::-webkit-scrollbar-thumb:horizontal:hover
-//     background: #71CA55
+body
+  &::-webkit-scrollbar 
+    width: 0px //12
+    height: 0px //12
+  &::-webkit-scrollbar-track-piece
+    background:rgba(0,0,0,0)
+  &::-webkit-scrollbar-thumb:vertical
+    height: 10px
+    background: #272c35
+  &::-webkit-scrollbar-thumb:vertical:hover
+    background: #71CA55
+  &::-webkit-scrollbar-thumb:horizontal
+    width: 10px
+    background: #272c35
+  &::-webkit-scrollbar-thumb:horizontal:hover
+    background: #71CA55
 
 // // Modules:
 @import 'sass/layouts/main-layout'

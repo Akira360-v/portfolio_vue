@@ -10,15 +10,13 @@
         <div class="nav__block">
           <div class="nav__link">
             <router-link to="/">{{$t('navServices')}}</router-link>
-            <router-link to="/about">{{$t('navWork')}}</router-link>
-            <router-link to="/about">{{$t('navCustomers')}}</router-link>
-            <router-link to="/about">{{$t('navContacts')}}</router-link>
-          </div>
-          <div class="nav__flag">
-            <div class="qwe">{{$t('text')}}</div>
-            <a href="#" @click="setLocale('ru')"><flag iso="ru"></flag></a>
-            <a href="#" @click="setLocale('en')"><flag iso="us"></flag></a>
-            <div class="qwe">qweqwe</div>
+            <router-link to="/about1">{{$t('navWork')}}</router-link>
+            <router-link to="/about2">{{$t('navCustomers')}}</router-link>
+            <router-link to="/about3">{{$t('navContacts')}}</router-link>
+            <div class="nav__flag">
+              <a href="#" @click="setLocale('ru')"><flag iso="ru"></flag></a>
+              <a href="#" @click="setLocale('en')"><flag iso="us"></flag></a>
+            </div>
           </div>
         </div>
       </div>
