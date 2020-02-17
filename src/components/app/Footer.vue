@@ -1,9 +1,6 @@
 <template>
   <div class="ewq">
-    <div class="container">
-      asdasdasdasdasd 
-    </div>
-    asdasdasdasdas
+    1
   </div>
 
 </template>
@@ -13,7 +10,5 @@ export default {};
 </script>
 
 <style>
-.ewq {
-  background: red;
-}
+
 </style>
