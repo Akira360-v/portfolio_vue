@@ -10,12 +10,28 @@ const routes = [{
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/work',
+    name: 'Work',
     meta: {
       layout: "main"
     },
-    component: () => import( /* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import('../views/Work.vue')
+  },
+  {
+    path: '/customers',
+    name: 'Customers',
+    meta: {
+      layout: "main"
+    },
+    component: () => import('../views/Customers.vue')
+  },
+  {
+    path: '/contacts',
+    name: 'Contacts',
+    meta: {
+      layout: "main"
+    },
+    component: () => import('../views/Contacts.vue')
   },
   {
     path: '/login',

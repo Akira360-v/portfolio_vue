@@ -10,9 +10,9 @@
         <div class="nav__block">
           <div class="nav__link">
             <router-link to="/">{{$t('navServices')}}</router-link>
-            <router-link to="/about">{{$t('navWork')}}</router-link>
-            <router-link to="/about">{{$t('navCustomers')}}</router-link>
-            <router-link to="/about">{{$t('navContacts')}}</router-link>
+            <router-link to="/work">{{$t('navWork')}}</router-link>
+            <router-link to="/customers">{{$t('navCustomers')}}</router-link>
+            <router-link to="/contacts">{{$t('navContacts')}}</router-link>
           </div>
           <div class="nav__flag">
             <div class="qwe">{{$t('text')}}</div>
