@@ -4,7 +4,8 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
-import localizeFilter from './filters/localize.filter'
+import {i18n} from './plugins/i18n'
+import FlagIcon from 'vue-flag-icon'
 
 import './assets/index.sass'
 import 'materialize-css/dist/js/materialize.min'
@@ -13,9 +14,10 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
 
-Vue.filter('localize', localizeFilter)
+
 
 Vue.config.productionTip = false
+Vue.use(FlagIcon)
 
 firebase.initializeApp({
   apiKey: "AIzaSyDhdVQEqO9ys0ekUkrOwdGYVQ_XSUTKjos",
@@ -34,6 +36,7 @@ let app
 firebase.auth().onAuthStateChanged(() => {
   if (!app) {
     app = new Vue({
+      i18n,
       router,
       store,
       render: h => h(App)

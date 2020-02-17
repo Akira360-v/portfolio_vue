@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import MainLayout from "@/layouts/MainLayout";
-import EmptyLayout from "@/layouts/EmptyLayout";
+import MainLayout from '@/layouts/MainLayout'
+import EmptyLayout from '@/layouts/EmptyLayout'
 export default {
   computed: {
     layout() {
@@ -18,11 +18,13 @@ export default {
   components: {
     MainLayout,
     EmptyLayout
-  }
-};
+  },
+
+
+}
 </script>
 
 <style lang="scss">
-@import "~materialize-css/dist/css/materialize.min.css";
-@import "assets/css.css";
+@import '~materialize-css/dist/css/materialize.min.css';
+@import 'assets/css.css';
 </style>
