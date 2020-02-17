@@ -9,20 +9,16 @@
         </div>
         <div class="nav__block">
           <div class="nav__link">
-            <router-link to="/">Услуги</router-link>
-            <router-link to="/about">Работы</router-link>
-            <router-link to="/about">Клиенты</router-link>
-            <router-link to="/about">Контакты</router-link>
-            <router-link to="/about">{{'proName'}}</router-link>
+            <router-link to="/">{{$t('navServices')}}</router-link>
+            <router-link to="/about">{{$t('navWork')}}</router-link>
+            <router-link to="/about">{{$t('navCustomers')}}</router-link>
+            <router-link to="/about">{{$t('navContacts')}}</router-link>
           </div>
-          <div class="switch">
-            <label>
-              eng
-              <!-- <input type="checkbox" /> -->
-              <input type="checkbox" v-model="isRuLocale" />
-              <span class="lever"></span>
-              rus
-            </label>
+          <div class="nav__flag">
+            <div class="qwe">{{$t('text')}}</div>
+            <a href="#" @click="setLocale('ru')"><flag iso="ru"></flag></a>
+            <a href="#" @click="setLocale('en')"><flag iso="us"></flag></a>
+            <div class="qwe">qweqwe</div>
           </div>
         </div>
       </div>
@@ -31,33 +27,17 @@
 </template>
 
 <script>
-// import '@/filters/localize.filter.js'
-
-// import { mapGetters } from "vuex";
 export default {
-  
-  data: () => ({
-    name: '',
-    isRuLocale: true,
-  }),
-    mounted() {
-    // this.isRuLocale = this.info.locale === 'ru-RU'
-    // this.isRuLocale = true === 'ru-RU'
-    // призыв базы неим
-    // this.name = this.info.name
-  },
-  computed: {
-    // locale() {
-    //   return 'ru-RU'
-    // }
-    // ...mapGetters(['info'])
-  },
-
-
+  name: 'Navbar',
   methods: {
-    // locale:this.isRuLocale ? "ru-RU" : 'en-US'
-    // locale: this.isRuLocale ? 'ru-RU' : 'en-US'
+    setLocale(locale){
+      import(`../../locales/${locale}.json`).then((msgs) => {
+        this.$i18n.setLocaleMessage(locale, msgs)
+        this.$i18n.locale = locale
+      })
+    }
   }
+
 }
 </script>
 

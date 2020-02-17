@@ -4,7 +4,7 @@
     <div class="qwe">asd</div>
     <router-view />
     <Footer />
-    <div class="qwe">asdasdas</div>
+    <div class="qwe">{{$t('text')}}</div>
   </div>
 </template>
 
