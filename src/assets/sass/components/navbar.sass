@@ -1,4 +1,68 @@
+
+#nav
+.container
 .nav
+  position: relative
   display: flex
   justify-content: space-between
   align-items: center
+  padding-top: 20px
+
+.nav__logo
+img
+.nav__block
+  display: flex
+  @media screen and (max-width: 992px)
+    display: none
+.nav__link
+  .router-link-exact-active
+    color: #FFFF00
+  a
+    color: #fff
+
+    margin-left: 30px
+.nav__flag
+  a
+    margin-left: 10px
+.fade_menu
+  position: relative
+  span
+    transition: 500ms
+    position: absolute
+    left: 0px
+    width: 35px
+    height: 3px
+    background: #000
+    &:nth-child(1)
+      top: 0
+    &:nth-child(2)
+      top: 10px
+    &:nth-child(3)
+      top: 20px      
+  @media screen and (max-width: 992px)
+    display: flex
+.fade_clear
+  position: relative
+  span
+    transition: 500ms
+    position: absolute
+    left: 0px
+    width: 35px
+    height: 3px
+    background: #000
+    &:nth-child(1)
+      transform: rotate(-45deg)
+      top: 10px
+    &:nth-child(2)
+      top: 10px
+      margin-top: 10px
+      opacity: 0
+    &:nth-child(3)
+      top: -10px
+      margin-top: 20px
+      transform: rotate(45deg)
+
+.modil__menu
+
+  position: fixed
+  right: 30px
