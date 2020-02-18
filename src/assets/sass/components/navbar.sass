@@ -1,6 +1,3 @@
-
-#nav
-.container
 .nav
   position: relative
   display: flex
@@ -9,52 +6,82 @@
   padding-top: 20px
 
 .nav__logo
-img
+  position: relative
+  z-index: 1
+  @media screen and (max-width: 425px)
+    z-index: 0
+  img
+    @media screen and (max-width: 768px)  
+      width: 80%
+
 .nav__block
   display: flex
+  position: relative
+  transition: 500ms
   @media screen and (max-width: 992px)
-    display: none
-.nav__link
-  .router-link-exact-active
-    color: #FFFF00
-  a
-    color: #fff
+    font-size: $mainFontSizeMenuModil
 
+.nav__link
+  display: flex
+  @media screen and (max-width: 768px)
+    transition: 500ms
+    background: $primary-color
+    flex-direction: column
+    top: -300px
+    position: absolute
+    right: -20px
+    text-align: center
+    left: -400px
+    border-radius: 0 0 0 50px
+  .router-link-exact-active
+    color: $warning-color
+  a
+    color: $default-color
     margin-left: 30px
+
 .nav__flag
+  @media screen and (max-width: 768px)
+    margin-left: 24px
   a
     margin-left: 10px
-.fade_menu
-  position: relative
+
+.cross__menu
+  width: 35px
+  height: 30px
+  position: absolute
+  right: 20px
+  top: -7px
+  z-index: 1
   span
     transition: 500ms
     position: absolute
-    left: 0px
-    width: 35px
+    right: 0px
     height: 3px
-    background: #000
+    background: $default-color
     &:nth-child(1)
+      width: 35px
       top: 0
     &:nth-child(2)
+      width: 25px
       top: 10px
     &:nth-child(3)
+      width: 35px
       top: 20px      
-  @media screen and (max-width: 992px)
-    display: flex
-.fade_clear
-  position: relative
+  @media screen and (min-width: 768px)
+    display: none
+.cross__clear
+  position: absolute
   span
     transition: 500ms
-    position: absolute
-    left: 0px
+    right: 0
     width: 35px
     height: 3px
-    background: #000
+    background: $default-color
     &:nth-child(1)
       transform: rotate(-45deg)
       top: 10px
     &:nth-child(2)
-      top: 10px
+      top: 0px
       margin-top: 10px
       opacity: 0
     &:nth-child(3)
@@ -62,7 +89,10 @@ img
       margin-top: 20px
       transform: rotate(45deg)
 
-.modil__menu
-
-  position: fixed
-  right: 30px
+.mobil__menu
+  padding-top: 20px
+  padding-bottom: 10px
+  transition: 500ms
+  top: -80px
+  a
+    margin-top: 15px
