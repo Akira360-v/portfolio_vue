@@ -16,7 +16,7 @@
           <div class="nav__link" v-bind:class="{ mobil__menu: show }">
             <router-link to="/">{{$t('navServices')}}</router-link>
             <router-link to="/work">{{$t('navWork')}}</router-link>
-            <router-link to="/customers">{{$t('navCustomers')}}</router-link>
+            <router-link to="/skill">{{$t('navSkill')}}</router-link>
             <router-link to="/contacts">{{$t('navContacts')}}</router-link>
             <div class="nav__flag">
               <a href="#" @click="setLocale('ru')">

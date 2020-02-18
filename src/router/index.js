@@ -18,6 +18,14 @@ const routes = [{
     component: () => import('../views/Work.vue')
   },
   {
+    path: '/skill',
+    name: 'Skill',
+    meta: {
+      layout: "main"
+    },
+    component: () => import('../views/Skill.vue')
+  },
+  {
     path: '/customers',
     name: 'Customers',
     meta: {

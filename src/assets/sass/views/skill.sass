@@ -1,0 +1,52 @@
+.loading-bar
+  position: relative
+  width: 350px
+  height: 30px
+  border-radius: 15px
+  overflow: hidden
+  border-bottom: 1px solid red
+  box-shadow: inset 0 1px 2px rgb(223, 14, 160)
+  @media screen and (max-width: 1300px)
+    width: 300px
+  @media screen and (max-width: 992px)
+    width: 200px
+    height: 20px
+  @media screen and (max-width: 768px)
+    width: 140px
+    height: 15px
+  @media screen and (max-width: 425px)
+    width: 100px
+.percentage
+  position: absolute
+  top: 1px
+  left: 1px
+  right: 1px
+  display: block
+  height: 100%
+  border-radius: 15px
+  background-color: rgb(18, 238, 220)
+  background-size: 30px 30px
+  background-image: linear-gradient(135deg, rgb(255, 0, 0) 35%, transparent 55%, transparent 10%, rgb(255, 0, 0) 50%)
+  animation: animate-stripes 3s linear infinite
+
+@keyframes animate-stripes
+  0%
+    background-position: 0 0
+  100%
+    background-position: 60px 0
+
+.skill__cont
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-top: 40px
+
+.skill__bar
+  padding: 0 10px
+.loading__text
+  @media screen and (max-width: 992px)
+    font-size: $mainFontSizeMenuModil
+  @media screen and (max-width: 768px)
+    font-size: $mainFontSize
+  @media screen and (max-width: 425px)
+    font-size: $mainFontSizeSkillMini

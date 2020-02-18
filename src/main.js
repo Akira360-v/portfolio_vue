@@ -20,7 +20,7 @@ import 'firebase/database'
 
 Vue.config.productionTip = false
 Vue.use(FlagIcon)
-Vue.use(VueAwesomeSwiper, /* { default global options } */)
+Vue.use(VueAwesomeSwiper,)
 
 firebase.initializeApp({
   apiKey: "AIzaSyDhdVQEqO9ys0ekUkrOwdGYVQ_XSUTKjos",
