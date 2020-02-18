@@ -1,7 +1,6 @@
 <template>
   <div class="main-layout">
     <Navbar />
-    <div class="qwe">1</div>
     <router-view />
     <Footer />
   </div>
