@@ -6,6 +6,8 @@ import store from './store'
 
 import {i18n} from './plugins/i18n'
 import FlagIcon from 'vue-flag-icon'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// import 'swiper/dist/css/swiper.css'
 
 import './assets/index.sass'
 import 'materialize-css/dist/js/materialize.min'
@@ -18,6 +20,7 @@ import 'firebase/database'
 
 Vue.config.productionTip = false
 Vue.use(FlagIcon)
+Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 firebase.initializeApp({
   apiKey: "AIzaSyDhdVQEqO9ys0ekUkrOwdGYVQ_XSUTKjos",
