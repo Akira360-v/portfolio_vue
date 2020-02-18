@@ -1,17 +1,14 @@
 <template>
   <div class="home">
-    <h1>Services</h1>
+    <div class="home__content">
+      <h1>{{$t('homeTitle')}}</h1>
+      <a href="#">{{$t('homeSubsidiary')}}</a>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'Home',
-  components: {
-    // HelloWorld
-  }
 }
 </script>
